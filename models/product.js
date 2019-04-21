@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const productSchema = newSchema({
+const productSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -19,9 +19,9 @@ const productSchema = newSchema({
     type: String,
     required: true
   }
-
 });
 
+module.exports = mongoose.model('Product', productSchema);
 
 // const mongodb = require('mongodb');
 // const getDb = require('../util/database').getDb;
